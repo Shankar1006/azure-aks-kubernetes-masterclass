@@ -132,7 +132,7 @@ http://<External-IP-from-get-service-output>
 ## Step-07: Clean-Up
 ```
 # Delete Applications
-kubectl delete -f kube-manifests/
+kubectl delete -f kube-manifests/   //after deleting verify pods,deployment, services whether present or not...
 ```
 
 ## References
