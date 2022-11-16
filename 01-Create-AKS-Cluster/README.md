@@ -52,8 +52,8 @@ kubectl get nodes -o wide
 kubectl get namespaces
 kubectl get ns
 
-# List Pods from all namespaces
-kubectl get pods --all-namespaces
+# List Pods from all namespaces // Pod represents a single instance of a running process in your cluster
+kubectl get pods --all-namespaces   # //to see all workloads in namespace, those are system default workloads which runs by default
 
 # List all k8s objects from Cluster Control plane
 kubectl get all --all-namespaces
