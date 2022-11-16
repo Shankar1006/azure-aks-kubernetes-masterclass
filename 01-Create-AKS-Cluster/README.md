@@ -33,7 +33,7 @@
 
 
 ## Step-03: Cloud Shell - Configure kubectl to connect to AKS Cluster
-- Go to https://shell.azure.com
+- Go to https://shell.azure.com  //opens command line interface in azure portal
 ```
 # Template
 az aks get-credentials --resource-group <Resource-Group-Name> --name <Cluster-Name>
@@ -43,17 +43,18 @@ az aks get-credentials --resource-group aks-rg1 --name aksdemo1
 
 # List Kubernetes Worker Nodes
 kubectl get nodes 
-kubectl get nodes -o wide
+kubectl get nodes -o wide // To get detailed information
 ```
 
 ## Step-04: Explore Cluster Control Plane and Workload inside that
 ```
 # List Namespaces
-kubectl get namespaces
+kubectl get namespaces  //shows namespaces
+(or)
 kubectl get ns
 
 # List Pods from all namespaces // Pod represents a single instance of a running process in your cluster
-kubectl get pods --all-namespaces   # //to see all workloads in namespace, those are system default workloads which runs by default
+kubectl get pods --all-namespaces    //to see all workloads in namespace, those are system default workloads which runs by default
 
 # List all k8s objects from Cluster Control plane
 kubectl get all --all-namespaces
@@ -80,7 +81,7 @@ kubectl get all --all-namespaces
   - Metrics
   - and many more 
 - **VM Scale Sets**
-  - Verify Azure VM Instances
+  - Verify Azure VM Instances               //Virtual machines scale set-->Settings/Networking-->Accelerating Network should be enabled
   - Verify if **Enhanced Networking is enabled or not**  
 
 
