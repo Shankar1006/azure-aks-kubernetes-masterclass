@@ -31,6 +31,7 @@ spec:
 - **Create Pod**
 ```
 # Create Pod
+open terminal cd this file location then enter below commands
 kubectl create -f 02-pod-definition.yml
 [or]
 kubectl apply -f 02-pod-definition.yml
