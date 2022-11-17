@@ -7,11 +7,12 @@
 ## Step-02: Create ReplicaSet
 
 ### Create ReplicaSet
-- Create ReplicaSet
+- Create ReplicaSet //there is no imperative approach for creating ReplicaSet,We will use yaml(declarative)
 ```
 kubectl create -f replicaset-demo.yml
 ```
 - **replicaset-demo.yml**
+- **kind**-ReplicaSet;**name**-my-helloworld-rs;**replicas**-3(it will create 3 ReplicaSets);**image**-stacksimplify/kube-helloworld:1.0.0--Will be downloaded from DockerHub(for now focus on these)
 ```yml
 apiVersion: apps/v1
 kind: ReplicaSet
@@ -55,7 +56,7 @@ kubectl describe rs my-helloworld-rs
 - Get list of Pods
 ```
 #Get list of Pods
-kubectl get pods
+kubectl get pods   //we will have 3 pods
 kubectl describe pod <pod-name>
 
 # Get list of Pods with Pod IP and Node in which it is running
@@ -67,7 +68,7 @@ kubectl get pods -o wide
 - Verify under **"name"** tag under **"ownerReferences"**. We will find the replicaset name to which this pod belongs to. 
 ```
 kubectl get pods <pod-name> -o yaml
-kubectl get pods my-helloworld-rs-c8rrj -o yaml 
+kubectl get pods my-helloworld-rs-c8rrj -o yaml //to get yml output
 ```
 
 ## Step-03: Expose ReplicaSet as a Service
