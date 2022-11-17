@@ -24,8 +24,8 @@ kubectl get nodes -o wide
 # Template
 kubectl run <desired-pod-name> --image <Container-Image> 
 
-# Replace Pod Name, Container Image
-kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0
+# Replace Pod Name, Container Image //docker image name, it is available in docker hub
+kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0  
 ```  
 
 ### List Pods
@@ -65,7 +65,7 @@ kubectl describe pod my-first-pod
 
 ### Access Application
 - Currently we can access this application only inside worker nodes. 
-- To access it externally, we need to create a **NodePort or Load Balancer Service**. 
+- To access it externally, we need to create a **NodePort or Load Balancer Service**. //In Azure we will be able to create Load balancer service.
 - **Services** is one very very important concept in Kubernetes. 
 
 ### Delete Pod
@@ -92,7 +92,7 @@ kubectl delete pod my-first-pod
   - Azure Standard Load Balancer created for Azure AKS Cluster
     - Frontend IP Configuration
     - Load Balancing Rules
-  - Azure Public IP 
+  - Azure Public IP  //We will have one 
 ```
 # Create  a Pod
 kubectl run <desired-pod-name> --image <Container-Image> 
@@ -103,7 +103,7 @@ kubectl expose pod <Pod-Name>  --type=LoadBalancer --port=80 --name=<Service-Nam
 kubectl expose pod my-first-pod  --type=LoadBalancer --port=80 --name=my-first-service
 
 # Get Service Info
-kubectl get service
+kubectl get service  //copy external IP and paste it in browser to see website
 kubectl get svc
 
 # Describe Service
@@ -116,7 +116,7 @@ http://<External-IP-from-get-service-output>
   - Azure Standard Load Balancer created for Azure AKS Cluster
     - Frontend IP Configuration
     - Load Balancing Rules
-  - Azure Public IP
+  - Azure Public IP      //now we will have two 
 - View the resources in Azure AKS Cluster - Resources section from Azure Portal Management Console  
 
 
@@ -151,8 +151,8 @@ kubectl exec -it my-first-pod -- /bin/bash
 # Execute some commands in Nginx container
 ls
 cd /usr/share/nginx/html
-cat index.html
-exit
+cat index.html  //it shows html doc which is seen as website 
+exit   //to exit
 ```
 
 - **Running individual commands in a Container**
@@ -168,7 +168,7 @@ kubectl exec -it my-first-pod -- cat /usr/share/nginx/html/index.html
 ### Get YAML Output
 ```
 # Get pod definition YAML output
-kubectl get pod my-first-pod -o yaml   
+kubectl get pod my-first-pod -o yaml //to see in YAMl format
 
 # Get service definition YAML output
 kubectl get service my-first-service -o yaml   
