@@ -3,7 +3,7 @@
 ## Step-01: Introduction
 - We are going to create a MySQL Database with persistence storage using **Azure Disks** 
 
-| Kubernetes Object  | YAML File |
+| Kubernetes Object  | YAML File   |
 | ------------- | ------------- |
 | Storage Class  | 01-storage-class.yml |
 | Persistent Volume Claim | 02-persistent-volume-claim.yml   |
