@@ -108,7 +108,7 @@ spec:
 ## Step-03: Create MSI - Managed Service Identity for External DNS to access Azure DNS Zones
 
 ### Create Manged Service Identity (MSI)
-- Go to All Services -> Managed Identities -> Add
+- Go to All Services -> Managed Identities -> Add      //3 will be there before creatint new---now weatre new
 - Resource Name: aksdemo1-externaldns-access-to-dnszones
 - Subscription: Pay-as-you-go
 - Resource group: aks-rg1
