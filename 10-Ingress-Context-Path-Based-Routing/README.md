@@ -16,7 +16,7 @@
 ## Step-04: Deploy and Verify
 ```t
 # Deploy Apps
-kubectl apply -R -f kube-manifests/
+kubectl apply -R -f kube-manifests/         //-R is for recursively go through all folders 
 
 # List Pods
 kubectl get pods
@@ -49,7 +49,7 @@ Password: password101
 ## Step-06: Clean-Up Applications
 ```t
 # Delete Apps
-kubectl delete -f kube-manifests/
+kubectl delete -f kube-manifests/      //add -R-->kubectl delete -R -f kube-manifests/
 
 # Delete Azure Disk created for Usermgmt Web App
 Go to All Services -> Azure Disks -> Delete disk
