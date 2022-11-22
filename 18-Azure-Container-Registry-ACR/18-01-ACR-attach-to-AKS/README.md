@@ -83,7 +83,7 @@ docker stop kube-nginx-acr
 
 ### Build, Test Locally, Tag and Push to ACR
 ```
-# Export Command
+# Export Command       //export command is for exporting and marking environment variables
 export ACR_REGISTRY=acrforaksdemo2.azurecr.io
 export ACR_NAMESPACE=app1
 export ACR_IMAGE_NAME=kube-nginx-acr
