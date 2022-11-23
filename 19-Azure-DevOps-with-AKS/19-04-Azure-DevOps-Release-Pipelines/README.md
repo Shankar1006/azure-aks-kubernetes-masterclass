@@ -110,7 +110,7 @@ kubectl get ns
 - Stage Name: Dev
 - Create Task 
 - Agent Job: Change to Ubunut Linux (latest)
-### Add Task: Create Secret
+### Add Task: Create Secret //Task: Deploy to Kubernetes
 - Display Name: Create Secret to allow image pull from ACR
 - Action: create secret
 - Kubernetes service connection: dev-ns-k8s-aks-svc-conn
@@ -245,7 +245,7 @@ kubectl get svc -n dev
 kubectl get svc -n qa
 kubectl get svc -n staging
 kubectl get svc -n prod
-kubect get svc --all-namespaces
+kubect get svc --all-namespaces   //for getting services present in all namespaces
 
 # Access Application
 http://<Public-IP-from-Get-Service-Output>
