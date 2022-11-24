@@ -79,8 +79,8 @@ AKS_AD_AKSADMIN_GROUP_ID=$(az ad group create --display-name aksadmins --mail-ni
 echo $AKS_AD_AKSADMIN_GROUP_ID
 
 # Create Azure AD AKS Admin User 
-# Replace with your AD Domain - aksadmin1@stacksimplifygmail.onmicrosoft.com
-AKS_AD_AKSADMIN1_USER_OBJECT_ID=$(az ad user create \
+# Replace with your AD Domain - aksadmin1@stacksimplifygmail.onmicrosoft.com //Azure Active Directory --> Overview --> Primary Domain
+AKS_AD_AKSADMIN1_USER_OBJECT_ID=$(az ad user create \      
   --display-name "AKS Admin1" \
   --user-principal-name aksadmin1@stacksimplifygmail.onmicrosoft.com \
   --password @AKSDemo123 \
@@ -139,7 +139,7 @@ az aks get-versions --location ${AKS_REGION} -o table
 AZURE_DEFAULT_AD_TENANTID=$(az account show --query tenantId --output tsv)
 echo $AZURE_DEFAULT_AD_TENANTID
 or
-Go to Services -> Azure Active Directory -> Properties -> Tenant ID
+Go to Services -> Azure Active Directory -> Manage/Properties -> Tenant ID
 
 
 # Set Windows Server/Node Username & Password
